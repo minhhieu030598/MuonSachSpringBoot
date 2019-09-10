@@ -18,4 +18,12 @@ class User {
     String name
 
     int status
+
+    User() {
+    }
+
+    User(String name, int status) {
+        this.name = name
+        this.status = status
+    }
 }

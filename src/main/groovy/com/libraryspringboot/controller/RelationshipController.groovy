@@ -18,9 +18,11 @@ class RelationshipController {
     RelationshipService service
 
     @PostMapping
-    ResponseEntity<MessageResponse> create(@RequestBody List<Relationship> relationships){
-        return service.create(relationships)
+    void create(@RequestBody List<Relationship> relationships){
+        service.create(relationships)
     }
+
+
 
 
 }
