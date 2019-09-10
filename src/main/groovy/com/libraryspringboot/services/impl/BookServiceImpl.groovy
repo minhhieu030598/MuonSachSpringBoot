@@ -10,15 +10,14 @@ import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 
 @Service
-class BookServiceImpl implements BookService {
+class BookServiceImpl implements BookService{
 
     @Autowired
     BookRepository repository
 
     @Override
     List<Book> getAll() {
-        List<Book> books = repository.findAll()
-        return books.findAll{book -> book.getStatus() == 1}
+        return repository.findAll()
     }
 
     @Override

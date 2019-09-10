@@ -8,10 +8,8 @@ import java.time.LocalDateTime
 
 class RelationshipMapper {
 
-    static Relationship mapper(User user, Book book, LocalDateTime dateFrom, LocalDateTime dateTo, LocalDateTime createAt) {
+    static Relationship mapper(User user, Book book, LocalDateTime dateFrom, LocalDateTime dateTo, LocalDateTime createAt ){
         return new Relationship(user.getId(), book.getId(),
-                dateFrom, dateTo, createAt)
+                dateFrom, dateTo, createAt )
     }
-
-
 }

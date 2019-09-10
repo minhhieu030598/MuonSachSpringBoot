@@ -36,7 +36,7 @@ class RelationshipSerImpl implements RelationshipService {
         BlockingQueue<Book> books = new LinkedBlockingQueue<>()
 
         bookRepository.findAllNotUse().each { book ->
-            books.contains(book) ? {} : books.offer(book)
+            books.offer(book)
         }
 
         def takeABook = { User user ->
@@ -50,7 +50,6 @@ class RelationshipSerImpl implements RelationshipService {
             Relationship relationship = RelationshipMapper.mapper(user, books.poll(), dateFrom, dateTo, LocalDateTime.now())
             repository.save(relationship)
             return relationship
-
         }
 
         def updateBook = { Relationship relationship ->
