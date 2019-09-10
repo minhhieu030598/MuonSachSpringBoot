@@ -29,14 +29,4 @@ class Relationship {
 
     LocalDateTime modifyAt
 
-    Relationship() {
-    }
-
-    Relationship(int idUser, int idBook, LocalDateTime dateFrom, LocalDateTime dateTo, LocalDateTime createAt) {
-        this.idUser = idUser
-        this.idBook = idBook
-        this.dateFrom = dateFrom
-        this.dateTo = dateTo
-        this.createAt = createAt
-    }
 }

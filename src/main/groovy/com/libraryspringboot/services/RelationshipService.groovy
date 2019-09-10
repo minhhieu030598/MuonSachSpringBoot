@@ -5,5 +5,5 @@ import com.libraryspringboot.models.system_response.MessageResponse
 import org.springframework.http.ResponseEntity
 
 interface RelationshipService {
-    void create(List<Relationship> relationships)
+    ResponseEntity<MessageResponse> create(List<Relationship> relationships)
 }
