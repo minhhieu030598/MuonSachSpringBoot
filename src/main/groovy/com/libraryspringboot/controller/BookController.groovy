@@ -16,7 +16,7 @@ class BookController {
 
     @GetMapping
     List<Book> get(){
-        return service.findAll()
+        return service.getAll()
     }
 
     @PostMapping
